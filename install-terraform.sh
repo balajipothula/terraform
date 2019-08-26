@@ -4,8 +4,6 @@
 # Date        : 16 August 2019,
 # Description : Installing Terraform on rhel.
 
-# https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744-linux.zip
-
 # exits any line in the bash script fails.
 set -e
 
