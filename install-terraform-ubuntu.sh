@@ -16,11 +16,14 @@ sudo apt -y update
 # Upgrading packages.
 sudo apt -y upgrade
 
-# installing openjdk8 unzip.
+# installing unzip.
 sudo apt -y install unzip
 
-# downloading and running sonarscanner.
+# downloading and extracting terraform.
 curl -J -L https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip -o $HOME/terraform.zip && \
 unzip -q $HOME/terraform.zip -d $HOME                                                                              && \
-rm -rf   $HOME/terraform.zip                                                                                       && \
-export PATH=$PATH:$HOME
+rm -rf   $HOME/terraform.zip
+
+# setting terraform path.
+echo "export PATH=$PATH:$HOME" | tee -a $HOME/.bashrc $HOME/.profile
+source $HOME/.bashrc $HOME/.profile
